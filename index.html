@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius Assignment-5</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- header area desing 
+    ----------------------->
+    <header>
+        <div class="navbar bg-base-100 px-6 mx-auto bg-slate-300 w-[94%] rounded mt-3">
+            <div class="flex-1 flex">
+                <a  href="#"> <span class="text-2xl font-bold inline-block">Interactive</span> <br> <span>Geometry Genius</span> </a>
+            </div>
+            <div class="flex-none gap-2">
+                <button id="btn_bolg" class="btn btn-active btn-info text-white hover:bg-sky-700">Button</button>
+            </div>
+        </div>
+    </header>
+        <!-- main area desing 
+    ----------------------->
+    <main>
+        <section class="lg:px-12 px-6 flex flex-col md:flex-row lg:flex-row ">
+            <div class="card_items w-full md:w-[78%] lg:w-[60%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+                    <!-- card One  desing 
+                        ---------------------->
+                <div class="card w-full bg-base-100 shadow-xl hover_color">
+                    <figure class="px-10 pt-10">
+                        <img class="w-full h-32" src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="triangle_name" class="card-title">Triangle</h2>
+                        <p>Area (A) = 0.5 x b x h</p>
+                        <div class="gap-4 mb-5">
+                            <input id="input_b" class="bg-slate-200 w-16 px-2" type="text" placeholder="b" > cm
+                            <input id="input_h" class="bg-slate-200 w-16 px-2" type="text" placeholder="h"> cm
+                        </div>
+                        <div class="mt-5">
+                            <button id="calculate_btn_one" class="Calculate_btn font-bold text-white hover:bg-sky-700">Calculate</button>
+                        </div>
+                        <p id="cm_sup"></p>
+                    </div>
+                </div>
+                 <!-- card Two  desing 
+                ---------------------->
+                <div class="card w-full bg-base-100 shadow-xl hover_color">
+                    <figure class="px-10 pt-10">
+                        <img class="w-full h-32" src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="rectangle_name" class="card-title">Rectangle</h2>
+                        <p >Area (A) = w x l</p>
+                        <div class="gap-4 mb-5">
+                            <input id="input_w" class="bg-slate-200 w-16 px-2" type="text" placeholder="w" > cm
+                            <input id="input_l" class="bg-slate-200 w-16 px-2" type="text" placeholder="l"> cm
+                        </div>
+                        <div class="mt-5">
+                            <button id="calculate_btn_tow" class="Calculate_btn font-bold text-white hover:bg-sky-700">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card Three  desing 
+                ---------------------->
+                <div class="card w-full bg-base-100 shadow-xl hover_color">
+                    <figure class="px-10 pt-10">
+                        <img class="w-full h-32" src="images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="Parallelogram_name" class="card-title">Parallelogram</h2>
+                        <p>Area (A) = b x h</p>
+                        <div class="gap-4 mb-5">
+                            <input id="input_x" class="bg-slate-200 w-16 px-2" type="text" placeholder="b" > cm
+                            <input id="input_y" class="bg-slate-200 w-16 px-2" type="text" placeholder="h"> cm
+                        </div>
+                        <div class="mt-5">
+                            <button id="calculate_btn_three" class="Calculate_btn font-bold text-white hover:bg-sky-700">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card four  desing 
+                ---------------------->
+                <div class="card w-full bg-base-100 shadow-xl hover_color">
+                    <figure class="px-10 pt-10">
+                        <img class="w-full h-32" src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="rhombus_name" class="card-title">Rhombus</h2>
+                        <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                        <div class="gap-4 mb-5">
+                            <input id="input_d1" class="bg-slate-200 w-16 px-2" type="text" placeholder="d1" > cm
+                            <input id="input_d2" class="bg-slate-200 w-16 px-2" type="text" placeholder="d2"> cm
+                        </div>
+                        <div class="mt-5">
+                            <button id="calculate_btn_four" class="Calculate_btn font-bold text-white hover:bg-sky-700">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card Five  desing 
+                ---------------------->
+                <div class="card w-full bg-base-100 shadow-xl hover_color">
+                    <figure class="px-10 pt-10">
+                        <img class="w-full h-32" src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="pentagon_name" class="card-title">Pentagon</h2>
+                        <p>Area (A) = 0.5 x p x b</p>
+                        <div class="gap-4 mb-5">
+                            <input id="input_p" class="bg-slate-200 w-16 px-2" type="text" placeholder="p" > cm
+                            <input id="input_k" class="bg-slate-200 w-16 px-2" type="text" placeholder="b"> cm
+                        </div>
+                        <div class="mt-5">
+                            <button id="calculate_btn_five" class="Calculate_btn font-bold text-white hover:bg-sky-700">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card Six  desing 
+                ---------------------->
+                <div class="card w-full bg-base-100 shadow-xl hover_color">
+                    <figure class="px-10 pt-10">
+                        <img class="w-full h-32" src="images/ellipse.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="ellipse_name" class="card-title">Ellipse</h2>
+                        <p>Area (A) = πab</p>
+                        <div class="gap-4 mb-5">
+                            <input id="input_a1" class="bg-slate-200 w-16 px-2" type="text" placeholder="a" > cm
+                            <input id="input_b1" class="bg-slate-200 w-16 px-2" type="text" placeholder="b"> cm
+                        </div>
+                        <div class="mt-5">
+                            <button id="calculate_btn_six" class="Calculate_btn font-bold text-white hover:bg-sky-700">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Calculate area  desing -----------
+            ---------------------->
+            <div class="card_details w-full md:w-[18%] lg:w-[40%] mx-auto mt-5">
+                <div class="overflow-x-auto">
+                    <h1 class="text-2xl text-center font-bold">Area Caltulations</h1>
+                    <table class="table w-full text-center">
+                      <tbody id="table-container">
+
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ----------
+        javaScript link in html--------- -->
+    <script src="js/calculate.js"></script>
+    <script src="js/commonFunctions"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
